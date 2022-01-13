@@ -23,7 +23,7 @@ client.on("ready", () => {
     commands?.create({
         name: "ping",
         description: "dpc bot povie pong"
-    })
+    });
 })
 
 client.on("interactionCreate", async (interaction) => {
