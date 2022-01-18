@@ -11,3 +11,5 @@ Tento bot je spraveny pre jeden z mojich WIP serverov pretoze diktatura nieje vh
 Demokracia vyzerá zatiaľ dobre no
 
 xd ja nevim co robim
+
+slash commands cursed
