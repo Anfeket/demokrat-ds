@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Anfeket/demokrat-ds#readme",
   "dependencies": {
-    "discord": "^0.8.2",
     "discord.js": "^13.6.0"
   }
 }
