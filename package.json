@@ -1,0 +1,23 @@
+{
+  "name": "demokrat-ds",
+  "version": "1.0.0",
+  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/081b8c15a8004d6e8b8e042104a2be31)](https://app.codacy.com/gh/Anfeket/demokrat-ds?utm_source=github.com&utm_medium=referral&utm_content=Anfeket/demokrat-ds&utm_campaign=Badge_Grade_Settings)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anfeket/demokrat-ds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anfeket/demokrat-ds/issues"
+  },
+  "homepage": "https://github.com/Anfeket/demokrat-ds#readme",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^13.6.0"
+  }
+}
