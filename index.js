@@ -14,11 +14,11 @@ const token = config.token;
 
 // setup command handler
 client.commands = new Collection();
-const commandfiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
+const commandfiles = fs.readdirSync("./commands").filter((file) => file.endsWith(".js"));
 for (const file of commandfiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
-};
+}
 
 // on bot ready
 client.on("ready", () => {
@@ -26,15 +26,19 @@ client.on("ready", () => {
 });
 
 // on message
-client.on("messageCreate", message => {
+client.on("messageCreate", (message) => {
     // log all messages
     console.log(`${message.author.username}: ${message.content}`);
 
     // pass to command handler
-    if (!message.content.startsWith(config.prefix)) return;
+    if (!message.content.startsWith(config.prefix)) {
+      return;
+    }
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-    if (!client.commands.has(command)) return;
+    if (!client.commands.has(command)) {
+      return;
+    }
     try {
       client.commands.get(command).execute(message, args);
       console.log(`Executing ${command}`);

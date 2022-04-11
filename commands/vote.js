@@ -6,7 +6,9 @@ module.exports = {
 	description: "Simple voting system",
 	execute(message, args) {
         // voting system with args and embed
-        if(!args[0]) return message.channel.send("Please provide a vote option!");
+        if(!args[0]) {
+            return message.channel.send("Please provide a vote option!");
+        }
         const embed = new Discord.MessageEmbed()
         .setTitle("Vote by " + message.author.tag)
         .setDescription(`${args.join(" ")}`)
@@ -16,7 +18,7 @@ module.exports = {
         .setThumbnail(message.author.displayAvatarURL())
         .setTimestamp();
         if(message.member.hasPermission("SEND_EMBEDS")) {    
-            message.channel.send({embeds: [embed]}).then(async msg => {
+            message.channel.send({embeds: [embed]}).then(async (msg) => {
                 // react with ticks
                 await msg.react("✅");
                 await msg.react("❌");
