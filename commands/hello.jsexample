@@ -1,4 +1,6 @@
-// create a new command called "hello"
+// import discord.js
+const Discord = require("discord.js");
+
 module.exports = {
 	name: "hello",
 	description: "Hello!",

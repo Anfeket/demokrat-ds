@@ -5,7 +5,7 @@ const { Client, Collection } = require("discord.js");
 const fs = require("fs");
 
 // create a discord client with intents
-const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"]});
 
 // import token from config.json
 const config = require("./config.json");
@@ -22,7 +22,7 @@ for (const file of commandfiles) {
 
 // on bot ready
 client.on("ready", () => {
-  console.log("I am ready!");
+  console.log(`I am ready! ${client.user.tag}`);
 });
 
 // on message
